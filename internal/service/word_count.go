@@ -17,5 +17,7 @@ func (svc *WordCountService) CountWords(text string) int {
 	re := regexp.MustCompile(`[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*`)
 	words := re.FindAllString(text, -1)
 
+	//Commit in hot-fix
+	//Second commit in hot-fix
 	return len(words)
 }
