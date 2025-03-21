@@ -18,5 +18,6 @@ func (svc *WordCountService) CountWords(text string) int {
 	words := re.FindAllString(text, -1)
 
 	//Commit in hot-fix
+	//Second commit in hot-fix
 	return len(words)
 }
