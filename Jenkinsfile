@@ -19,9 +19,9 @@ pipeline {
 				script {
 					def featureCommits = sh(script: "git rev-list origin/feature --count", returnStdout: true).trim()
                     def mainCommits = sh(script: "git rev-list origin/main --count", returnStdout: true).trim()
-                    def developCommits = sh(script: "git rev-list origin/develop --count", returnStdout: true).trim()
+                    def hotfixCommits = sh(script: "git rev-list origin/hotfix --count", returnStdout: true).trim()
 
-                    def calculatedVersion = "${mainCommits}.${developCommits}.${featureCommits}"
+                    def calculatedVersion = "${mainCommits}.${featureCommits}.${hotfixCommits}"
 
                     echo "Calculated version: ${calculatedVersion}"
                     env.APP_VERSION = calculatedVersion
