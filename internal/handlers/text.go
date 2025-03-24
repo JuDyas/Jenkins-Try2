@@ -21,6 +21,7 @@ func CountWords(c echo.Context) error {
 
 	svc := service.NewWordCountService()
 	wordCount := svc.CountWords(req.Text)
+	//123
 
 	return c.JSON(http.StatusOK, map[string]int{"word_count": wordCount})
 }
